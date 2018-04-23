@@ -43,7 +43,7 @@ func Arq(path, out string, w int) error {
 		if err != nil {
 			return err
 		}
-		m = resize.Resize(uint(500), 0, img, resize.Lanczos3)
+		m = resize.Resize(uint(w), 0, img, resize.Lanczos3)
 		out, err := os.Create(filepath.Join(out, filepath.Base(path)))
 		if err != nil {
 			return err
